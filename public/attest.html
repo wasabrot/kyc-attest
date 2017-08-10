@@ -1,0 +1,35 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script  language="javascript" src="web3/dist/web3.js" ></script>
+  <script  language="javascript" src="uport-connect/dist/uport-connect.js" ></script>
+  <script  language="javascript" src="kjua/dist/kjua.min.js" ></script>
+  <script  language="javascript" src="javascripts/attestBrowser.js" ></script>
+</head>
+
+<body>
+Attest a Person <div id="welcome"></div>
+
+<input type="button" name="read data" value="readData" onclick="readData()" /> Sending push:
+
+uPort ID: <div id='claimUPortId' ></div>
+Name:<div id='claimName' ></div>
+Tel: <div id='claimTel' ></div>
+Country: <div id='claimCountry' ></div>
+<input type="button" name="attest" value="attestData" onclick="attestData()" /> Sending push:
+
+<br>
+Public uPort Data: <div id="userCredentials" >Public User Information</id>
+
+QR Code:
+
+<div >
+  <a id="qrHref" href="">
+      <img id="qrImage" crossorgin="anonymous" src="" style="width: 400px; height: 400px;" /> 
+  </a>
+<div>
+
+  <div id="statusDiv" >Status</id>
+
+</body>
+</html>
