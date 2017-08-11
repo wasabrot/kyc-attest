@@ -1,7 +1,7 @@
-apiVersion: extensions/v1beta1 
-kind: Deployment 
+apiVersion: extensions/v1beta1
+kind: Deployment
 metadata:
-  name: testuport
+  name: kyc-attest
 spec:
   replicas: 1
   strategy:
@@ -14,11 +14,11 @@ spec:
   template:
     metadata:
       labels:
-        app: testuport
+        app: kyc-attest
     spec:
       containers:
       - name: master
-        image: gcr.io/testbot-168718/attester:v1  # Replace PROJECT_ID
+        image: gcr.io/testbot-168718/kyc-attest:v1  # Replace PROJECT_ID
         ports:
         no- hostPort: 8081
           containerPort: 8081
@@ -38,6 +38,4 @@ spec:
           valueFrom:
             secretKeyRef:
               name: attester
-              key: attester_address.txt            
-              
-
+              key: attester_address.txt
