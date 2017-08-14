@@ -77,7 +77,11 @@ router.get('/attest', function (req, res) {
 
 
 router.get('/healthcheck', function (req, res) {
-  res.send("OK");
+  res.json(router.getHealthcheck());
 })
+
+router.getHealthcheck = () => {
+  return {"OK":true,"app":"attest"};
+}
 
 module.exports = router

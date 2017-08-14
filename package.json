@@ -3,19 +3,31 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "mocha"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "~4.15.2",
+    "jsontokens": "latest",
+    "kjua": "latest",
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2",
+    "sinon": "^3.2.0",
+    "supertest": "^3.0.0",
     "uport": "latest",
-    "uport-connect": "latest",
-    "kjua": "latest",
-    "jsontokens": "latest"
+    "uport-connect": "latest"
+  },
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.5.0",
+    "should": "latest",
+    "expect": "latest",
+    "supertest": "latest",
+    "assert": "latest",
+    "request": "^2.81.0"
   }
 }

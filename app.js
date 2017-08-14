@@ -14,6 +14,7 @@ var app = express();
 
 console.log("starting..")
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -31,7 +32,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/attest',attest)
 app.use('/login',login)
-console.log("done..")
+
 
 
 // catch 404 and forward to error handler
@@ -46,11 +47,11 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;app
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
   // render the error page
   res.status(err.status || 500);
   res.render('error');
 });
 // added to default:
+
 
 module.exports = app;
